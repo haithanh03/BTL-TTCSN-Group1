@@ -17,8 +17,7 @@
         <div class="menu">
             <ul class="ul_menu">
                 <li class="li_menu"><a class="menu_link" href="./header.html">Trang chủ</a></li>
-                <li class="li_menu"><a class="menu_link" href="">Vé nội địa</a></li>
-                <li class="li_menu"><a class="menu_link" href="">Vé quốc tế</a></li>
+                <li class="li_menu"><a class="menu_link" href="">Vé nội địa</a></li>            
                 <li class="li_menu"><a class="menu_link" href="">Thông tin hãng</a></li>
                 <li class="li_menu"><a class="menu_link" href="">Tin tức</a></li>
             </ul>
@@ -34,36 +33,52 @@
         </div>
     </header>
     <main>
-        <div class="choose">
-            <div class="choose_top">
-                <div class="choose_top_left">
-                    <label for="">LOẠI HÀNH TRÌNH</label>
-                    <select name="" id="">
-                        <option value="1chieu">Một chiều</option>
-                        <option value="khuhoi">Khứ hồi</option>
-                    </select>
+        <div class="booking">
+            <div class="booking_col1">
+                <div class="booking_col1_left">
+                    <div class="booking_col1_top">
+                        <label for="">ĐIỂM KHỞI HÀNH</label>
+                        <input type="text" placeholder="Khởi hành">
+        
+                        <i style="font-size: 35px; color: rgb(4, 105, 164);" class="fa-sharp fa-solid fa-arrows-left-right"></i>
+        
+                        <label for="">ĐIỂM ĐẾN</label>
+                        <input type="text" placeholder="Nhập điểm đến">
+                    </div>
+                    <div class="booking_col1_top">
+                        <label for="">lOẠI VÉ</label>
+                        <select name="" id="">
+                            <option value="thuonggia">THƯƠNG GIA</option>
+                            <option value="phothong">PHỔ THÔNG</option>
+                        </select>
+                        <i style="font-size: 35px; color: rgb(4, 105, 164);" class="fa-sharp fa-solid fa-arrows-left-right"></i>
+                        <label for="">NGÂN SÁCH</label>
+                        <input type="text" placeholder="Nhập ngân sách...">
+                    </div>
                 </div>
-
-                <div class="choose_top_bottom">
-                    <label for="">ĐIỂM KHỞI HÀNH</label>
-                    <select name="" id="">
-                        <option value="cxr"></option>
-                        <option value="sin"></option>
-                    </select>
-                </div>
-
-                <div class="choose_top_left">
-                    <label for="">LOẠI HÀNH TRÌNH</label>
-                    <select name="" id="">
-                        <option value="1chieu">Một chiều</option>
-                        <option value="khuhoi">Khứ hồi</option>
-                    </select>
+    
+                <div class="booking_col1_right">
+                    <a href="">
+                        <i style="font-size: 40px;" class="fa-sharp fa-solid fa-plane-departure"></i>
+                    </a>
                 </div>
             </div>
-            <div class="choose_bottom">
-
+    
+            <div class="booking_col2">
+                <div class="signin">
+                    <a href="../code/DN.html">
+                        <span>ĐĂNG NHẬP</span>
+                    </a>
+                </div>
+    
+                <div class="signin">
+                    <a href="../code/DKI.html">
+                        <span>ĐĂNG KÍ</span>
+                    </a>
+                </div>
             </div>
         </div>
+
         <div class="banner">
             <a href=""><img src="../img/Doi-ve-may-bay.png" alt=""></a>
         </div>
@@ -170,8 +185,45 @@
                 
             </div>
         </div>
-        <div class="new">
-            
+        
+        <div class="ttnb">
+            <div class="ttnb_tittle">
+                <h2>Thông tin nổi bật</h2>
+            </div>
+            <div class="ttnb_div">
+                <div class="ttnb_box">
+                    <div class="ttnb_img">
+                        <img src="../img/HL-business.webp" alt="">
+                    </div>
+                    <div class="ttnb_box_tittle">
+                        <a href="">
+                            <h3>Hạng thương gia</h3>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="ttnb_box">
+                    <div class="ttnb_img">
+                        <img src="../img/HL-pre-eco.webp" alt="">
+                    </div>
+                    <div class="ttnb_box_tittle">
+                        <a href="">
+                            <h3>Hạng phổ thông đặc biệt</h3>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="ttnb_box">
+                    <div class="ttnb_img">
+                        <img src="../img/HL-entertainment.webp" alt="">
+                    </div>
+                    <div class="ttnb_box_tittle">
+                        <a href="">
+                            <h3>Dịch vụ trên không</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
