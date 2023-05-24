@@ -11,8 +11,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
+<div id="floating-icons">
+    <a href="#" class="icon" id="dn"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+    <a href="#" class="icon" id="dk"><i class="fas fa-user-plus"></i> Đăng kí</a>
+</div>
+<script>
+document.addEventListener('mousemove', function(e) {
+    var floatingIcons = document.getElementById('floating-icons');
+    if (e.clientX > floatingIcons.offsetLeft && e.clientY > floatingIcons.offsetTop &&
+        e.clientX < (floatingIcons.offsetLeft + floatingIcons.offsetWidth) &&
+        e.clientY < (floatingIcons.offsetTop + floatingIcons.offsetHeight)) {
+      floatingIcons.style.transform = 'translate(0, -50%) translateY(-10px)';
+    } else {
+      floatingIcons.style.transform = 'translate(0, -50%)';
+    }
+  });
+</script> 
+<script>
+    document.getElementById("dn").addEventListener("click", function() {
+        window.location.href = "formDN.html";
+    });
+    document.getElementById("dk").addEventListener("click", function() {
+        window.location.href = "formDN.html";
+    });
+</script>
 <body>
     <header>
         <div class="logo">
@@ -32,11 +58,14 @@
                 <i style="color: #ffc43b; font-size: 3rem;" class="fas fa-phone-square-alt"></i>
             </div>
             <div class="hotline">
-                <span>HotLine tư vẫn toàn quốc</span>
+                <span>HotLine tư vấn toàn quốc</span>
                 <span class="number">1900 4798</span>
             </div>
         </div>
     </header>
+    <div class="banner">
+        <a href=""><img src="../img/Doi-ve-may-bay.png" alt=""></a>
+    </div>
     <main>
         
         <h1>Tin tức</h1>
@@ -44,7 +73,7 @@
             <div class="news-container">
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh1.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -55,7 +84,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh2.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -66,7 +95,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh3.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -77,7 +106,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh4.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -88,7 +117,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh5.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -99,7 +128,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh6.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -110,7 +139,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh7.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -121,7 +150,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh8.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -132,7 +161,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh9.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -143,7 +172,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh1.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -154,7 +183,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh1.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">
@@ -165,84 +194,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
-                            alt="">
-                    </div>
-                    <div class="news-sub">
-                        <div class="new-heading">Đặt vé máy bay từ Hà Nội đi Bangkok khứ hồi giá rẻ</div>
-                        <div class="news-desc">Sở hữu trong tay tấm vé máy bay từ Hà Nội đi Bangkok là bạn đã có thể vi
-                            vu đến thủ đô xinh đẹp của xứ sở Chùa Vàng, nơi có những</div>
-                    </div>
-                </div>
-                <div class="news-item">
-                    <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
-                            alt="">
-                    </div>
-                    <div class="news-sub">
-                        <div class="new-heading">Đặt vé máy bay từ Hà Nội đi Bangkok khứ hồi giá rẻ</div>
-                        <div class="news-desc">Sở hữu trong tay tấm vé máy bay từ Hà Nội đi Bangkok là bạn đã có thể vi
-                            vu đến thủ đô xinh đẹp của xứ sở Chùa Vàng, nơi có những</div>
-                    </div>
-                </div>
-                <div class="news-item">
-                    <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
-                            alt="">
-                    </div>
-                    <div class="news-sub">
-                        <div class="new-heading">Đặt vé máy bay từ Hà Nội đi Bangkok khứ hồi giá rẻ</div>
-                        <div class="news-desc">Sở hữu trong tay tấm vé máy bay từ Hà Nội đi Bangkok là bạn đã có thể vi
-                            vu đến thủ đô xinh đẹp của xứ sở Chùa Vàng, nơi có những</div>
-                    </div>
-                </div>
-                <div class="news-item">
-                    <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
-                            alt="">
-                    </div>
-                    <div class="news-sub">
-                        <div class="new-heading">Đặt vé máy bay từ Hà Nội đi Bangkok khứ hồi giá rẻ</div>
-                        <div class="news-desc">Sở hữu trong tay tấm vé máy bay từ Hà Nội đi Bangkok là bạn đã có thể vi
-                            vu đến thủ đô xinh đẹp của xứ sở Chùa Vàng, nơi có những</div>
-                    </div>
-                </div>
-                <div class="news-item">
-                    <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
-                            alt="">
-                    </div>
-                    <div class="news-sub">
-                        <div class="new-heading">Đặt vé máy bay từ Hà Nội đi Bangkok khứ hồi giá rẻ</div>
-                        <div class="news-desc">Sở hữu trong tay tấm vé máy bay từ Hà Nội đi Bangkok là bạn đã có thể vi
-                            vu đến thủ đô xinh đẹp của xứ sở Chùa Vàng, nơi có những</div>
-                    </div>
-                </div>
-                <div class="news-item">
-                    <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
-                            alt="">
-                    </div>
-                    <div class="news-sub">
-                        <div class="new-heading">Đặt vé máy bay từ Hà Nội đi Bangkok khứ hồi giá rẻ</div>
-                        <div class="news-desc">Sở hữu trong tay tấm vé máy bay từ Hà Nội đi Bangkok là bạn đã có thể vi
-                            vu đến thủ đô xinh đẹp của xứ sở Chùa Vàng, nơi có những</div>
-                    </div>
-                </div>
-                <div class="news-item">
-                    <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
-                            alt="">
-                    </div>
-                    <div class="news-sub">
-                        <div class="new-heading">Đặt vé máy bay từ Hà Nội đi Bangkok khứ hồi giá rẻ</div>
-                        <div class="news-desc">Sở hữu trong tay tấm vé máy bay từ Hà Nội đi Bangkok là bạn đã có thể vi
-                            vu đến thủ đô xinh đẹp của xứ sở Chùa Vàng, nơi có những</div>
-                    </div>
-                </div>
-                <div class="news-item">
-                    <div class="news-img">
-                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2017/12/ve-may-bay-hanoi-di-bangkok-05052023-1.jpg"
+                        <img src="../img/anh1.jpg"
                             alt="">
                     </div>
                     <div class="news-sub">

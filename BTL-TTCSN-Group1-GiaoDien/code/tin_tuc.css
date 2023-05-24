@@ -293,3 +293,32 @@ main h1 {
     text-align: center;
     margin-bottom: 50px;
 }
+
+#floating-icons {
+    position: fixed;
+    right: 20px; /* Điều chỉnh vị trí theo ý muốn */
+    top: 50%; /* Điều chỉnh vị trí theo ý muốn */
+    transform: translate(0, -50%);
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    background-color: #ccc;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon i {
+    margin-right: 10px;
+  }
+  
+  .icon:hover {
+    background-color: #555;
+    transform: translateX(5px);
+  }
+  
