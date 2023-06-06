@@ -41,7 +41,7 @@ const userSchema = mongoose.Schema({
 })
 
 //Hash password user presave 
-/*userSchema.pre('save', async function(next) {
+userSchema.pre('save', async function(next) {
     const user = this;
     if (user.isModified('password')) {
         user.password = await bcrypt.hash(user.password, 8)
@@ -68,12 +68,12 @@ userSchema.pre("findOneAndUpdate", function(next) {
  *@param {string} password 
  *@returns {Promise<boolean>}
  */
-/*
+
 userSchema.methods.isPasswodMatch = async function(password) {
     const user = this;
     return bcrypt.compare(password, user.password)
 }
-*/
+
 /**
  * @typedef User
  */

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin hãng Archive - Phòng Thông Tin </title>
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="/css/TTH.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<div id="floating-icons">
+    <a href="http://localhost:3000/login" class="icon" id="dn"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+    <a href="http://localhost:3000/register" class="icon" id="dk"><i class="fas fa-user-plus"></i> Đăng kí</a>
+</div>
+<script>
+document.addEventListener('mousemove', function(e) {
+    var floatingIcons = document.getElementById('floating-icons');
+    if (e.clientX > floatingIcons.offsetLeft && e.clientY > floatingIcons.offsetTop &&
+        e.clientX < (floatingIcons.offsetLeft + floatingIcons.offsetWidth) &&
+        e.clientY < (floatingIcons.offsetTop + floatingIcons.offsetHeight)) {
+      floatingIcons.style.transform = 'translate(0, -50%) translateY(-10px)';
+    } else {
+      floatingIcons.style.transform = 'translate(0, -50%)';
+    }
+  });
+</script> 
+<script>
+    document.getElementById("dn").addEventListener("click", function() {
+        window.location.href = "formDN.html";
+    });
+    document.getElementById("dk").addEventListener("click", function() {
+        window.location.href = "formDK.html";
+    });
+</script>
+<body>
+    <header>
+        <div class="logo">
+            <a href=""><img src="../public/image/logo_nosub.svg" alt=""></a>
+        </div>
+        <div class="menu">
+            <ul class="ul_menu">
+                <li class="li_menu"><a class="menu_link" href="http://localhost:3000/Home">Trang chủ</a></li>
+                <li class="li_menu"><a class="menu_link" href="">Vé nội địa</a></li>
+                <li class="li_menu"><a class="menu_link" href="">Vé quốc tế</a></li>
+                <li class="li_menu"><a class="menu_link" href="">Thông tin hãng</a></li>
+                <li class="li_menu"><a class="menu_link" href="http://localhost:3000/Tintuc">Tin tức</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <div class="icon_contact">
+                <i style="color: #ffc43b; font-size: 3rem;" class="fas fa-phone-square-alt"></i>
+            </div>
+            <div class="hotline">
+                <span>HotLine tư vẫn toàn quốc</span>
+                <span class="number">1900 4798</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        
+        <h1> <br> Thông tin hãng </h1>
+        <div class="news">
+            <div class="news-container">
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2021/10/dat-ve-may-bay-gia-re-5102021-1.jpg"
+                            alt="">
+                    </div>
+                    <div class="news-sub">
+                        <div class="new-heading"><a href="https://www.vietnamairlinesgiare.vn/thong-tin-hang/san-ve-vietnam-airlines-gia-re.html">Đặt vé máy bay Vietnam Airlines giá rẻ đơn giản, uy tín</a></div>
+                        <div class="news-desc">Vietnamairlinesgiare là đại lý vé chính thức của các hãng hàng không Vietnam Airlines, Vietjet Air, Pacific Airlines, Bamboo Airways,</div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2021/01/thiet-bi-giai-tri.jpg"
+                            alt="">
+                    </div>
+                    <div class="news-sub">
+                        <div class="new-heading"> <a href="https://www.vietnamairlinesgiare.vn/thong-tin-hang/gia-ve-hang-pho-thong-dac-biet-vietnam-airlines.html">Giá vé hạng phổ thông đặc biệt Vietnam Airlines</a> </div>
+                        <div class="news-desc">Từ ngày 1-7-2019, hãng hàng không quốc gia Việt Nam (Vietnam Airlines) vừa giới thiệu hạng ghế mới, hạng phổ thông đặc biệt. Hiện nay thị trường di chuyển bằng máy bay có</div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2018/05/luu-y-hanh-ly-tren-may-bay-bi-that-lac-11-5-2018-1.jpg"
+                            alt="">
+                    </div>
+                    <div class="news-sub">
+                        <div class="new-heading"><a href="https://www.vietnamairlinesgiare.vn/thong-tin-hang/ho-tro-hanh-ly.html">Hỗ trợ hành lý: Hành Lý Đến Chậm, Hư Hỏng Và Thất Lạc</a></div>
+                        <div class="news-desc">Ngoài sở hữu những tấm vé máy bay giá rẻ cho một kỳ nghỉ hứa hẹn nhiều bất ngờ thì thất lạc hành lý cũng là một trong những vấn</div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2020/09/di-may-bay-vietnam-airlines-duoc-mang-bao-nhieu-kg-hanh-ly-19-9-2020-3.jpg"
+                            alt="">
+                    </div>
+                    <div class="news-sub">
+                        <div class="new-heading"> <a href="https://www.vietnamairlinesgiare.vn/thong-tin-hang/di-may-bay-vietnam-airline-duoc-mang-bao-nhieu-kg-hanh-ly.html"> Đặt vé máy bay từ Tp Hồ Chí Minh đi Đồng Hới giá rẻ</a></div>
+                        <div class="news-desc">Hành khách đi máy bay Vietnam Airlines được mang bao nhiêu kg hành lý? Đây là băn khoăn chung của rất nhiều người khi đồng hành</div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2021/01/hanh-ly-dac-biet-vietnamairlines-min.jpg"
+                            alt="">
+                    </div>
+                    <div class="news-sub">
+                        <div class="new-heading"> <a href="https://www.vietnamairlinesgiare.vn/thong-tin-hang/hanh-ly-dac-biet-vietnam-airlines.html">Hành lý đặc biệt Vietnam Airlines</a></div>
+                        <div class="news-desc">Hành lý là yếu tố quan trọng trên mỗi chuyến bay và góp phần vào sự thành công của chuyến bay đó. Có n...</div>
+                    </div>
+                </div>
+                <!--
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2023/04/di-da-lat-mac-gi-thang-4-800x550.jpg"
+                            alt="">
+                    </div>
+                    <div class="news-sub">
+                        <Du class="new-heading"><a href="https://www.vietnamairlinesgiare.vn/tin-tuc/du-lich-da-lat-thang-4-nen-mac-gi.html">Du lịch Đà Lạt tháng 4 nên mặc gì?Lưu ý gì về thời tiết?</a> </div>
+                        <div class="news-desc">Thời tiết Đà Lạt tháng 4 rất dễ chịu và đây cũng là tháng Đà Lạt có nhiều cánh đồng hoa nhất. </div>
+                    </div>
+                </div>
+                -->
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2020/11/xe-buýt-sân-bây-NB-e1604720274327.jpg"
+                            alt="">
+                    </div>
+        
+                    <div class="news-sub">
+                        <div class="new-heading"><a href="https://www.vietnamairlinesgiare.vn/thong-tin-hang/xe-bus-vietnam-airline-o-noi-bai.html">Xe bus Vietnam Airline ở Nội Bài
+                        </a></div>
+                        <div class="news-desc">Vietnam Airlines là hãng hàng không quốc gia Việt Nam luôn đi đầu về chất lượng và dịch vụ. Để chứng tỏ vị trí của mình tro...</div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2020/10/mang-ruou-len-tren-may-bay.jpg"
+                            alt="">
+                    </div>
+        
+                
+                    <div class="news-sub">
+                        <div class="new-heading"> <a href="https://www.vietnamairlinesgiare.vn/thong-tin-hang/co-duoc-mang-ruou-len-may-bay-vietnam-airlines-hay-khong.html">Có được mang rượu lên máy bay Vietnam Airlines hay không?
+                        </a></div>
+                        <div class="news-desc">Trong các chuyến đi du lịch hay đi công tác của mình, nhiều hành khách có sở thích mua rượu về làm quà hoặc bổ sung vào bộ sưu tập</div>
+                    </div>
+                </div>
+                
+            
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2020/09/mang-thu-cung-len-may-bay-vietnam-airlines-29-9-2020-1.jpg"
+                            alt="">
+                    </div>
+                    <div class="news-sub">
+                        <div class="new-heading"> <a href="https://www.vietnamairlinesgiare.vn/thong-tin-hang/mang-thu-cung-len-may-bay-vietnam-airlines.html">Có được mang thú cưng lên máy bay Vietnam Airlines không?</a></div>
+                        <div class="news-desc">Thú cưng là vật nuôi được nhiều người yêu mến, nâng niu và mang theo bên cạnh ngay khi cả khi đi máy bay. Vậy có ...</div>
+                    </div>
+                </div>
+              
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2015/03/phong-ve-vietnam-airlines-3.jpg"
+                            alt="">
+                    </div>
+                    <div class="news-sub">
+                        <div class="new-heading"><a href="">Phòng vé máy bay Vietnam Airlines tại TP. Hồ Chí Minh</a></div>
+                        <div class="news-desc">Được đánh giá là hãng hàng không 3 sao theo tiêu chuẩn của Skytrax và là hãng hàng không đầu tiên của Đông Nam Á gia nhập liên minh</div>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-img">
+                        <img src="https://www.vietnamairlinesgiare.vn/wp-content/uploads/2015/03/phong-ve-vietnam-airlines-1.jpg"
+                            alt="">
+                    </div>
+                    <div class="news-sub">
+                        <div class="new-heading"><a href="https://www.vietnamairlinesgiare.vn/thong-tin-hang/phong-ve-vietnam-airlines-tai-ha-noi.html"></a>Đại lý phòng vé máy bay Vietnam Airlines tại Hà Nội</div>
+                        <div class="news-desc">Vietnam Booking là đại lý bán vé máy bay uy tín của Vietnam Airlines tại hà nội – hãng hàng không quốc gia Việt Nam. Với nhiều năm hoạt</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_top">
+            <div class="footer_top_col1">
+                <div class="footer_logo">
+                    <a href=""><img src="../img/logo_nosub.svg" alt=""></a>
+                </div>
+                <div class="col1_icon">
+                    <i style="color: #ffc43b;" class="far fa-clock"></i>
+                    <span>Hỗ trợ 24/7 (các ngày trong tuần)</span>
+                </div>
+                <div class="col1_icon">
+                    <i style="color: #ffc43b;" class="fas fa-phone"></i>
+                    <span>HOTLINE: 1900 4798</span>
+                </div>
+                <div class="col1_icon">
+                    <i style="color: #ffc43b;" class="far fa-envelope"></i>
+                    <span>ttcsn_N1@gmail.com</span>
+                </div>
+            </div>
+            <div class="footer_top_col2">
+                <h3>PHÁP LÝ</h3>
+                <ul class="col2_text">
+                    <li class="col_li_text"><a href="">Điều khoản sử dụng</a></li>
+                    <li class="col_li_text"><a href="">Chính sách bảo mật</a></li>
+                    <li class="col_li_text"><a href="">Chính sách hoàn hủy</a></li>
+                </ul>
+            </div>
+            <div class="footer_top_col3">
+                <h3>HỖ TRỢ</h3>
+                <ul class="col2_text">
+                    <li class="col_li_text"><a href="">Hướng dẫn liên hệ qua Zalo</a></li>
+                    <li class="col_li_text"><a href="">Hướng dẫn liên hệ qua Viber</a></li>
+                    <li class="col_li_text"><a href="">Hướng dẫn thanh toán</a></li>
+                </ul>
+            </div>
+            <div class="footer_top_col4">
+                <h3>THÔNG TIN HỮU ÍCH</h3>
+                <ul class="col2_text">
+                    <li class="col_li_text"><a href="">Thông tin hành lý</a></li>
+                    <li class="col_li_text"><a href="">Thuế phí, lệ phí và phụ thu</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_betw">
+            <div class="footer_betw_col1">
+                <div class="bew_col1_tittle">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>HỒ CHÍ MINH</span>
+                </div>
+                <ul class="col2_text">
+                    <li class="col_li_text1"><a href="">190-192 Trần Quý, Phường 6, Quận 11</a></li>
+                    <li class="col_li_text1"><a href="">164 Lê Thánh Tôn, Bến Thành, Quận 1</a></li>
+                    <li class="col_li_text1"><a href="">54 Phạm Hồng Thái, Bến Thành, Quận 1</a></li>
+                </ul>
+            </div>
+            <div class="footer_betw_col2">
+                <div class="bew_col1_tittle">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>HÀ NỘI</span>
+                    <div class="betw_col2_text">
+                        <span>30 Phan Chu Trinh, Quận Hoàn Kiếm</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_betw_col3">
+                <div class="bew_col1_tittle">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>ĐÀ NẴNG</span>
+                    <div class="betw_col2_text">
+                        <span>174 Nguyễn Văn Linh, Quận Thanh Khê</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="footer_bottom_col">
+                <div class="bottom_col1_tittle">
+                    <h4>THEO DÕI CHÚNG TÔI</h4>
+                </div>
+                <div class="social_media">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer_bottom_col">
+                <div class="bottom_col1_tittle">
+                    <h4>TẢI VIETNAM AIRLINES</h4>
+                </div>
+                <div class="download">
+                    <a href=""><img src="../img/google-play-icon.svg" alt=""></a>
+                    <a href=""><img src="../img/app-store-icon.png" alt=""></a>
+                </div>
+            </div>
+            <div class="footer_bottom_col">
+                <div class="bottom_col1_tittle">
+                    <h4>GIẢI THƯỞNG</h4>
+                </div>
+                <div class="prize">
+                    <a href=""><img src="../img/award-1.png" alt=""></a>
+                    <a href=""><img src="../img/award-2.png" alt=""></a>
+                    <a href=""><img src="../img/award-3.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- <span>@ 2020 Copyright All Rights Reserved. - Công Ty Cổ Phần Việt Nam Booking - Mã số thuế: 0308042348
+            Người phụ trách nội dung: Châu Hoài Dung - Trưởng Ban Biên Tập - Email: bientap@vietnambooking.com</span> -->
+    </footer>
+</body>
+
+</html>

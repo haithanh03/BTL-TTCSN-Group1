@@ -11,14 +11,15 @@ const goLogin = (req, res, next) => {
 const userLogin = async (req, res, next) => {
     try {
         console.log(req.body)
-        const checkUser = await userModel.findOne({ email: req.body.email }); //
+        const checkUser = await userModel.findOne({ email: req.body.email , password: req.body.password}); //
         console.log(checkUser)
         if (!checkUser) {
-            return res.status(httpStatus.NOT_FOUND).json(
+           return res.alert(httpStatus.NOT_FOUND).json(
                 {
                     message: "can not create user"
                 }
             )
+            //console.log('Email đã được đăng kí!')
         }
         else {
             //req.session.email = req.body.email;
@@ -46,6 +47,7 @@ const createUser = async (req, res, next) => {
     try {
         console.log(req.body)
         const checkUser = await userModel.create(req.body); //
+        
         console.log(checkUser)
         if (!checkUser) {
             return res.status(httpStatus.NOT_FOUND).json(

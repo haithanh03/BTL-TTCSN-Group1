@@ -9,6 +9,8 @@ const logger = require('morgan');
 const router = require('./src/routers/index')
 const mongoose = require("mongoose");
 
+app.use(express.static('public'));
+
 // Use dotenv
 require('dotenv').config()
 
@@ -34,8 +36,18 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 //router 
 // const router = require('./src/routers/index')
+app.get('/Home', (req, res) => {
+    res.render('Home');
+  });
 
 
+app.get('/TTH', (req, res) => {
+    res.render('TTH');
+});
+
+app.get('/Tintuc', (req, res) => {
+    res.render('Tintuc');
+});
 // Set up session store in mongoDB 
 
 
