@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/Home.css">
+</head>
+<body class="">
+    
+    <div class="container">
+        <header>
+            <h1>Hệ Thống Bán Vé</h1>
+            <div class="shopping">
+                <img src="image/shopping.svg">
+                <span class="quantity">0</span>
+            </div>
+        </header>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Tìm theo địa điểm">
+            <select id="ticketType">
+              <option value="">Tất cả</option>
+              <option value="Thương gia">Thương gia</option>
+              <option value="Phổ thông">Phổ thông</option>
+            </select>
+            <select id="priceRange">
+              <option value="">Tất cả</option>
+              <option value="1">Dưới 1,000,000</option>
+              <option value="2">1,000,000 - 2,000,000</option>
+              <option value="3">Trên 2,000,000</option>
+            </select>
+            <button onclick="searchByName()">Tìm kiếm</button>
+          </div>
+        <script>
+            function searchByName() {
+                const searchInput = document.getElementById('searchInput');
+                const searchTerm = searchInput.value.toLowerCase();
+                const ticketType = document.getElementById('ticketType').value;
+                const priceRange = document.getElementById('priceRange').value;
+              
+                // Lọc danh sách sản phẩm dựa trên tên sản phẩm, loại vé và giá tiền
+                const filteredProducts = products.filter(product =>
+                  isStringMatching(product.name.toLowerCase(), searchTerm) &&
+                  (ticketType === '' || product.type === ticketType) &&
+                  (priceRange === '' || isPriceMatching(product.price, priceRange))
+                );
+              
+                // Xóa các sản phẩm hiện có trong danh sách
+                list.innerHTML = '';
+              
+                // Tạo lại danh sách sản phẩm với các sản phẩm đã lọc
+                filteredProducts.forEach((value, key) => {
+                  let newDiv = document.createElement('div');
+                  newDiv.classList.add('item');
+                  newDiv.innerHTML = `
+                    <img src="image/${value.image}">
+                    <div class="title">Điểm đến: ${value.name}</div>
+                    <div class="title">Thời gian: ${value.time}</div>
+                    <div class="title">Loại vé: ${value.type}</div>
+                    <div class="price">Giá vé: ${value.price.toLocaleString()}</div>
+                    <button onclick="addToCard(${key})">Thêm vào giỏ hàng</button>`;
+                  list.appendChild(newDiv);
+                });
+              }
+              
+              function isPriceMatching(price, priceRange) {
+                // Kiểm tra giá tiền có phù hợp với khoảng giá tiền không
+                switch (priceRange) {
+                  case '1':
+                    return price < 1000000;
+                  case '2':
+                    return price >= 1000000 && price <= 2000000;
+                  case '3':
+                    return price > 2000000;
+                  default:
+                    return true;
+                }
+              }
+              
+              function isStringMatching(string, searchTerm) {
+                // Kiểm tra xem một chuỗi có chứa từ khóa tìm kiếm không
+                return string.includes(searchTerm);
+              }
+              
+        </script>        
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="card">
+        <h1>Thông tin vé đã đặt</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Đóng</div>
+        </div>
+    </div>
+    
+
+<script>
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCard = document.querySelector('.listCard');
+let body = document.querySelector('body');
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
+
+openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+})
+closeShopping.addEventListener('click', ()=>{
+    body.classList.remove('active');
+})
+total.addEventListener('click', () => {
+    window.location.href = 'http://localhost:8888/order/create_payment_url';
+});
+
+let products = [
+    {
+        id: 1,
+        name: 'Hà Nội',
+        image: 'hn.jpg',
+        time: '12:00 - 13:30',
+        type: 'Thương gia',
+        price: 1500000
+    },
+    {
+        id: 2,
+        name: 'Hồ Chí Minh',
+        image: 'anh8.jpg',
+        time: '12:00 - 13:30',
+        type: 'Thương gia',
+        price: 120000
+    },
+    {
+        id: 3,
+        name: 'Đà Nẵng',
+        image: 'Danang.jpg',
+        time: '12:00 - 13:30',
+        type: 'Thương gia',
+        price: 220000
+    },
+    {
+        id: 4,
+        name: 'Phú Quốc',
+        image: 'anh7.jpg',
+        time: '12:00 - 13:30',
+        type: 'Thương gia',
+        price: 123000
+    },
+    {
+        id: 5,
+        name: 'Nha Trang',
+        image: 'nt.jpg',
+        time: '12:00 - 13:30',
+        type: 'Thương gia',
+        price: 320000
+    },
+    {
+        id: 6,
+        name: 'Huế',
+        image: 'anh6.jpg',
+        time: '12:00 - 13:30',
+        type: 'Thương gia',
+        price: 120000
+    },
+];
+let listCards  = [];
+function initApp(){
+    products.forEach((value, key) =>{
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `
+            <img src="image/${value.image}">
+            <div class="title">Điểm đến: ${value.name}</div>
+            <div class="title">Thời gian: ${value.time}</div>
+            <div class="title">Loại vé: ${value.type}</div>
+            <div class="price">${value.price.toLocaleString()}</div>
+            <button onclick="addToCard(${key})">Thêm vào giỏ hàng</button>`;
+        list.appendChild(newDiv);
+    })
+}
+initApp();
+
+function getFilteredProducts() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const ticketType = document.getElementById('ticketType').value;
+    const priceRange = document.getElementById('priceRange').value;
+
+    // Lọc danh sách sản phẩm dựa trên tên sản phẩm, loại vé và giá tiền
+    const filteredProducts = products.filter(product =>
+        isStringMatching(product.name.toLowerCase(), searchTerm) &&
+        (ticketType === '' || product.type === ticketType) &&
+        (priceRange === '' || isPriceMatching(product.price, priceRange))
+    );
+
+    return filteredProducts;
+}
+
+
+function addToCard(key) {
+    const filteredProducts = getFilteredProducts();
+    const productIndex = filteredProducts[key].id - 1; // Adjust the index based on the original products array
+    if (listCards[productIndex] == null) {
+        // copy sản phẩm vào list
+        listCards[productIndex] = JSON.parse(JSON.stringify(products[productIndex]));
+        listCards[productIndex].quantity = 1;
+    }
+    reloadCard();
+}
+
+function reloadCard(){
+    listCard.innerHTML = '';
+    let count = 0;
+    let totalPrice = 0;
+    listCards.forEach((value, key)=>{
+        totalPrice = totalPrice + value.price;
+        count = count + value.quantity;
+        if(value != null){
+            let newDiv = document.createElement('li');
+            newDiv.innerHTML = `
+                <div><img src="image/${value.image}"/></div>
+                <div>${value.name}</div>
+                <div>${value.time}</div>
+                <div>${value.type}</div>
+                <div>${value.price.toLocaleString()}</div>
+                <div>
+                    <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <div class="count">${value.quantity}</div>
+                    <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                </div>`;
+                listCard.appendChild(newDiv);
+        }
+    })
+    total.innerText = totalPrice.toLocaleString();
+    quantity.innerText = count;
+}
+function changeQuantity(key, quantity){
+    if(quantity == 0){
+        delete listCards[key];
+    }else{
+        listCards[key].quantity = quantity;
+        listCards[key].price = quantity * products[key].price;
+    }
+    reloadCard();
+}
+</script>
+
+</body>
+</html>
